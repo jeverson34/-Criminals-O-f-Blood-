@@ -1,0 +1,9 @@
+@keyframes gradient-bg {
+  from {
+    background-position: top left;
+  }
+
+  to {
+    background-position: bottom right;
+  }
+}

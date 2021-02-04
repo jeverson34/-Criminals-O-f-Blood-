@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200&family=Open+Sans:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  --ff-primary: "Poppins", sans-serif;
+  --ff-secondary: "Josefin Sans", sans-serif;
+
+  --fs-h0: 5rem;
+  --fs-h1: 3rem;
+  --fs-h2: 2.15rem;
+  --fs-h3: 1.8rem;
+  --fs-h4: 1.35rem;
+  --fs-body: 1rem;
+
+  --clr-black: #010102;
+  --clr-dark: #111111;
+  --clr-light: #f6f6f6;
+  --clr-light-grey: #cdcdcd;
+  --clr-grey: #666666;
+  --clr-orange: blue;
+  --clr-dark-orange: blue;
+  --clr-pink: red;
+
+  height: 100%;
+
+  scroll-behavior: smooth;
+
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  color: var(--clr-light);
+  margin: 0;
+  height: 100%;
+}
+
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: unset;
+  z-index: -1000;
+  background: linear-gradient(
+    120deg,
+    var(--clr-black),
+    #222222,
+    var(--clr-dark) 60%
+  );
+}
+
+.content {
+  flex: 1 0 auto;
+  padding-top: 95px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* SPECIAL CSS STUFF IDK */
+
+.gradient-text {
+  background: linear-gradient(120deg, var(--clr-dark-orange), var(--clr-pink));
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-bg 1s ease alternate-reverse infinite;
+}
+
+.scroll-to {
+  /* background-color: var(--clr-black); */
+  height: 75px;
+}
+
+.section {
+  padding: 2rem 2rem 0;
+}
+
+@media (min-width: 550px) {
+  .section {
+    padding: 2rem 3rem 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .section {
+    max-width: 775px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .section {
+    max-width: 900px;
+  }
+}
